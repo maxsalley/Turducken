@@ -10,6 +10,7 @@ import CoreLocation
 import WebKit
 import SwiftUI
 
+#if (arch(arm64) || arch(x86_64))
 @available(iOS 13.0, *)
 public class FanMakerSDKWebViewController : UIViewController, WKScriptMessageHandler {
     public var fanmaker : FanMakerSDKWebView? = nil
@@ -82,4 +83,4 @@ public struct FanMakerSDKWebViewControllerRepresentable : UIViewControllerRepres
         
     }
 }
-
+#endif

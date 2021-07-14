@@ -11,6 +11,7 @@ import WebKit
 
 let FanMakerSDKSessionToken : String = "FanMakerSDKSessionToken"
 
+#if (arch(arm64) || arch(x86_64))
 @available(iOS 13.0, *)
 public struct FanMakerSDKWebView : UIViewRepresentable {
     public var webView : WKWebView
@@ -68,3 +69,4 @@ public struct FanMakerSDKWebView : UIViewRepresentable {
         //
     }
 }
+#endif
